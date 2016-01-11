@@ -66,4 +66,19 @@ controller.spawn({
   });
 });
 
+controller.hears('help', 'direct_mention', function(bot, message) {
+  var botname = '@' + bot.identity.name
+    , reply = '' +
+    '`' + botname + ' teams.all`: Prints all data stored in teams.\n' +
+    '`' + botname + ' teams.get <id>`: Prints the value stored for <id> in teams.\n' +
+    '`' + botname + ' teams.save <id> <string>`: Saves a string with the given ID in teams.\n\n' +
+    '`' + botname + ' channels.all`:  Prints all data stored in channels.\n' +
+    '`' + botname + ' channels.get <id>`: Prints the value stored for <id> in channels.\n' +
+    '`' + botname + ' channels.save <id> <string>`: Saves a string with the given ID in channels.\n\n' +
+    '`' + botname + ' users.all`:  Prints all data stored in users.\n' +
+    '`' + botname + ' users.get <id>`: Prints the value stored for <id> in users.\n' +
+    '`' + botname + ' users.save <id> <string>`: Saves a string with the given ID in users.\n' +
+    '';
 
+  bot.reply(message, reply);
+});
