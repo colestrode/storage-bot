@@ -13,7 +13,7 @@ if (storageType === 'redis') {
   });
 } else if (storageType === 'mongo') {
   slackbotConfig.storage = require('botkit-storage-mongo')({
-    mongoUri: process.env.MONGO_URL
+    mongoUri: process.env.MONGO_URI
   });
 }
 

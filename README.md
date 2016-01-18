@@ -20,7 +20,6 @@ By default, will fall back to the native botkit simple storage (file system). NO
 won't work on Heroku.
 
 `FIREBASE_URI`: If `STORAGE` is `firebase`, used to set the `firebase_uri` property of the firebase adapter.
-NOTE: At this time `botkit-storage-firebase` has not been published to NPM, so this mode won't work.
 
 `MONGO_URL`: If `STORAGE` is `mongo`, used to set the `mongoUri` property of the MongoDB adapter.
 
